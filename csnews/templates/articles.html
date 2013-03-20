@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title%}{% trans "Albisteak" %}{% endblock %} 
+{% block content%}
+
+<h1>Albisteak</h1>
+
+{% if articles%}
+<div class="news">
+
+{% for article in page.object_list %}
+
+
+<div class="newsitem">
+{% if article.image%}
+<img src="{{ article.image.get_width90_url }}" alt="" class="newsphoto"/>
+{% endif %}
+<h2><a href="{{article.get_absolute_url}}">{{article.title}}</a></h2>
+
+<p class="data">{{article.published}} &nbsp;&brvbar;&nbsp; {{article.tags}}</p>
+{{article.summary|safe}}
+<p><a href="{{article.get_absolute_url}}" class="smalllink">Gehiago irakurri...</a></p>
+
+ 
+</div>
+
+<div class="cleaner">&nbsp;</div>
+
+
+
+{% endfor %}
+
+
+<p class="paginator">
+<strong>Emaitzak</strong>: {{page.paginator.count}} | <strong>Orriak</strong>:
+{% for num in page.page_range %}  
+   {% if not num %} ...  {# literally dots #}  
+   {% else %}
+       {% ifequal page.number num %}
+           <strong class="paginate-current">{{num}}</strong>
+       {% else %}
+           <a href="?orria={{num}}">{{num}}</a>
+       {% endifequal %}  
+       
+   {% endif %}  
+{% endfor %} 
+</p>
+
+</div>
+{% endif %}
+{% endblock %} 
+
+{% block menu%}
+<div id="menuherria">
+<h2>Harpidetza</h2>
+<div id="harpidetza">
+<a href="/albisteak/feed-rss"><img src="{{STATIC_URL}}img/rss.png" alt="Harpidetu Ahotsak RSS-ra" ></a>
+<a href="/info/harpidetza"><img src="{{STATIC_URL}}img/newsletter.png" alt="Harpidetu Ahotsak buletinera" ></a>
+</div>
+<h2>Hemeroteka</h2>
+<div id="delicious" style="padding-left:20px;">
+<script type="text/javascript" src="http://del.icio.us/feeds/js/asiersarasua/ahotsak?title=&count=10;"></script>
+<noscript><a href="http://del.icio.us/josu">my del.icio.us</a></noscript>
+</div>
+</div>
+{% endblock %}
