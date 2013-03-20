@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404
 from django.template import RequestContext
 
 from csnews.models import Article
-from ahotsak.base.diggpaginator import DiggPaginator
+from csnews.diggpaginator import DiggPaginator
 
 import time
 from datetime import datetime
