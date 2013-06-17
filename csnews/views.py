@@ -30,15 +30,15 @@ def index(request):
     
     h['articles'] = Article.objects.filter(is_public=True)
     h['page'] = _get_page(h['articles'],request.GET.get('orria', '1'))    
-    return render_to_response('articles.html',h,context_instance=RequestContext(request))
+    return render_to_response('news/articles.html',h,context_instance=RequestContext(request))
 
 def article_index(request,article_slug):
     """ """
     h = {}
     h['obj'] = get_object_or_404(Article,slug=article_slug)
-    return render_to_response('article.html',h,context_instance=RequestContext(request))
+    return render_to_response('news/article.html',h,context_instance=RequestContext(request))
 
 def hemeroteka(request):
     """ """
     h = {}
-    return render_to_response('hemeroteka.html',h,context_instance=RequestContext(request))
+    return render_to_response('news/hemeroteka.html',h,context_instance=RequestContext(request))
