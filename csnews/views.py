@@ -35,7 +35,7 @@ def index(request):
 def article_index(request,article_slug):
     """ """
     h = {}
-    if request.LANGUAGE_CODE = 'eu':
+    if request.LANGUAGE_CODE == 'eu':
         h['obj'] = get_object_or_404(Article, slug_eu = article_slug)
     else:
         h['obj'] = get_object_or_404(Article, slug_es = article_slug)
