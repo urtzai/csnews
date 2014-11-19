@@ -10,10 +10,12 @@ from django.template.loader import render_to_string
 from django.shortcuts import render_to_response
 from django.shortcuts import get_object_or_404
 from django.template import RequestContext
+from transmeta import TransMeta
 
 
 class Article(models.Model):
-    """Article model"""
+    __metaclass__ = TransMeta
+    
     title  = models.CharField(_('title'), max_length=200)
     slug = models.SlugField(_('slug'),unique=True,db_index=True)
     published = models.DateTimeField(_('published'))
@@ -30,6 +32,7 @@ class Article(models.Model):
         return self.title
 
     class Meta:
+        translate = ('title', 'slug', 'summary','body')
         verbose_name = _('article')
         verbose_name_plural = _('articles')
         ordering  = ('-published',)
