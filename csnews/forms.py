@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.admin.widgets import ForeignKeyRawIdWidget
 from django.utils.html import escape
-from django.utils.text import truncatewords
+from django.template.defaultfilters import truncatewords
 
 
 class PhotologueForeignKeyRawIdWidget(ForeignKeyRawIdWidget):
