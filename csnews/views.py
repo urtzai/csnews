@@ -35,7 +35,10 @@ def index(request):
 def article_index(request,article_slug):
     """ """
     h = {}
-    h['obj'] = get_object_or_404(Article,slug=article_slug)
+    if request.LANGUAGE_CODE = 'eu':
+        h['obj'] = get_object_or_404(Article, slug_eu = article_slug)
+    else:
+        h['obj'] = get_object_or_404(Article, slug_es = article_slug)
     return render_to_response('news/article.html',h,context_instance=RequestContext(request))
 
 def hemeroteka(request):
