@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '1.9'
+version = '2.1'
 
 setup(name='csnews',
       version=version,
