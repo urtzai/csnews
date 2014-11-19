@@ -23,3 +23,4 @@ csnews/utils/load_data.py
 csnews/utils/load_images.py
 dist/csnews-1.8.zip
 dist/csnews-2.1.zip
+dist/csnews-2.2.zip
