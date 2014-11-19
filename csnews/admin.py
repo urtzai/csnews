@@ -16,11 +16,11 @@ show_entry_thumbnail.allow_tags = True
 
 class ArticleAdmin(admin.ModelAdmin):
    
-    list_display = ('id', 'title', 'published','is_public',show_entry_thumbnail)
-    list_display_links = ('id','title')
+    list_display = ('id', 'title_es', 'published','is_public',show_entry_thumbnail)
+    list_display_links = ('id','title_es')
     ordering = ('-id',)        
-    search_fields = ['title','summary']
-    prepopulated_fields = {'slug': ('title',)}
+    search_fields = ['title_es','summary_es']
+    prepopulated_fields = {'slug_es': ('title_es',), 'slug_eu':('title_eu',)}
     photologue_image_fields = ('image',)
     #raw_id_fields = ('image',)    
     #form = ArticleAdminForm
@@ -42,7 +42,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
 class TinyMCEArticleAdmin(ArticleAdmin):
     def formfield_for_dbfield(self, db_field, **kwargs):
-        if db_field.name in ('body'):
+        if db_field.name in ('body_es','body_eu'):
             return db_field.formfield(widget=TinyMCE(
                 attrs={'cols': 80, 'rows': 30},
                 mce_attrs={
