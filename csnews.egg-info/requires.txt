@@ -1,0 +1,2 @@
+django-photologue
+django-tinymce

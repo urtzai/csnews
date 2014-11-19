@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: csnews
+Version: 1.8
+Summary: Simple news module
+Home-page: http://www.codesyntax.com
+Author: Urtzi Odriozola
+Author-email: uodriozola@codesyntax.com
+License: GPL
+Description: csnews
+        ======
+        
+        News module for Django
+Platform: UNKNOWN
