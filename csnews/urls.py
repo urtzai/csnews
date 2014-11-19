@@ -7,6 +7,6 @@ urlpatterns = patterns('',
     (r'^$','csnews.views.index'),
     (r'^feed-(?P<url>.*)/$', LatestNews()),
     (r'^hemeroteka/', 'csnews.views.hemeroteka'),            
-    (r'^(?P<article_slug>[\-\d\w]+)/$','csnews.views.article_index'),
+    url(r'^(?P<article_slug>[\-\d\w]+)/$','csnews.views.article_index', name='new_display'),
 )
 

@@ -27,3 +27,4 @@ dist/csnews-2.2.zip
 dist/csnews-2.3.zip
 dist/csnews-2.4.zip
 dist/csnews-2.5.zip
+dist/csnews-2.6.zip
