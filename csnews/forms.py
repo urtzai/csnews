@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.admin.widgets import ForeignKeyRawIdWidget
 from django.utils.html import escape
-from django.utils.text import truncate_words
+from django.utils.text import truncatewords
 
 
 class PhotologueForeignKeyRawIdWidget(ForeignKeyRawIdWidget):
@@ -18,4 +18,4 @@ class PhotologueForeignKeyRawIdWidget(ForeignKeyRawIdWidget):
             img_url = obj.get_display_url()
         except:
             return '<br /><strong>%s</strong> ' % ('No display size defined')
-        return '<br /><img src="%s" /> <br /><strong>%s</strong> ' % (img_url,escape(truncate_words(obj, 14)))        
+        return '<br /><img src="%s" /> <br /><strong>%s</strong> ' % (img_url,escape(truncatewords(obj, 14)))        

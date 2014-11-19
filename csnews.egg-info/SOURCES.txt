@@ -21,3 +21,4 @@ csnews/templates/news/articles.html
 csnews/templates/news/hemeroteka.html
 csnews/utils/load_data.py
 csnews/utils/load_images.py
+dist/csnews-1.8.zip
