@@ -30,7 +30,7 @@ Instalation
 .. code-block:: python
 
     INSTALLED_APPS = [
-        'django_forum_app',
+        'csnews',
     ]
 
 Then apply migrations: 
