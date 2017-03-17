@@ -1,6 +1,10 @@
 CSNews
 ======
 
+.. image:: https://badge.fury.io/py/csnews.svg
+    :target: https://badge.fury.io/py/csnews
+    :alt: Latest PyPI version
+
 .. image:: https://travis-ci.org/urtzai/csnews.svg?branch=master
     :target: https://travis-ci.org/urtzai/csnews
 
