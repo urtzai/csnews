@@ -1,7 +1,6 @@
 from django.contrib import admin
 from csnews.models import Article
-
-from tinymce.widgets import TinyMCE
+from csnews.forms import ArticleAdminForm
 
 
 def show_entry_thumbnail(item):
@@ -21,6 +20,7 @@ class ArticleAdmin(admin.ModelAdmin):
     search_fields = ['title', 'summary']
     prepopulated_fields = {'slug': ('title',)}
     photologue_image_fields = ('image',)
+    form = ArticleAdminForm
 
 
 admin.site.register(Article, ArticleAdmin)

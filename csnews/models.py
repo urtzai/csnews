@@ -10,6 +10,7 @@ class Article(models.Model):
     summary = models.TextField(_('summary'), blank=True)
     body = models.TextField(_('body'))
     image = models.ForeignKey(Photo, null=True, blank=True, related_name=_('news_image'))
+    seo_tags = models.CharField(_('seo tags'), max_length=300, blank=True)
 
     is_public = models.BooleanField(default=True)
 
