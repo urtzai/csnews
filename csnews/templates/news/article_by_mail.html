@@ -1,7 +1,7 @@
 <html>
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-   <title>Ahotsak.com</title>
+   <title></title>
    <style type="text/css" media="screen">
       body {
       	padding: 0;
@@ -230,8 +230,8 @@
 }</style></head>
 <body style="background-color:"B2D2F8"; margin: 0pt; font-family: 'Verdana',Lucida,Helvetica,Arial,sans-serif; font-size: 90%; color: rgb(51, 51, 51);">
 <table width="100%" border="0" cellpadding="0" cellspacing="0" style="color: black; background-color:#B2D2F8" >
-   <tbody>  
-            <tr>         
+   <tbody>
+            <tr>
       <td align="center">
       <br/>
        <table width="580" cellpadding="0" cellspacing="0" bgcolor="#fff">
@@ -240,33 +240,33 @@
          <img src="http://{{BASE_PATH}}{{STATIC_URL}}img/ahotsakboletintop.png" width="600" />
          <table class="content" width="580" border="0" cellpadding="10px" cellspacing="0" bgcolor="#fff" >
             <tbody>
-            
+
             <tr>
                <td class="header" style="height: 70px;" height="70"><img src="http://{{BASE_PATH}}{{STATIC_URL}}img/logoablt.jpg" alt="Ahotsak" width="580" height="51" /></td>
             </tr>
             <tr>
                <td>
-                  
+
                   <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                     
+
                      <tbody><tr>
                         <td class="mainbar" valign="top" width="580" align="left">
                            <h4 class="meta" style="font-size:80%;font-weight:normal;color:#999;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:2px;padding-bottom:2px;padding-right:5px;padding-left:5px;text-align:right;text-transform:uppercase;letter-spacing:2px;">{{article.published}}</h4>
-                           
-                           
+
+
                               <h3 style="color:#000;font-size:130%;font-weight:normal;clear:both;"><a name="toc_item_0" style="color: rgb(106, 151, 201); text-decoration: none;"></a><a href="http://www.ahotsak.com{% url ahotsak.news.views.article_index article.slug %}?utm_source=newsletter&utm_medium=email&utm_campaign=buletina" style="color: rgb(106, 151, 201); text-decoration: none;">{{article.title}}</a></h3>
-{% if article.image%}			      
+{% if article.image%}
 <img link="true" alt="img1" src="http://{{BASE_PATH}}{{ article.image.get_newsletter_url|urlencode }}" style="float: left; padding-right: 10px; margin-right: 10px; margin-bottom: 10px;" align="left" />
-{% endif %}                             
+{% endif %}
                               <p style="line-height:1.5em;font-size:90%;margin-top:0;margin-bottom:20px;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
 	{{article.summary|safe|removetags:"p"}} <a href="http://www.ahotsak.com{% url ahotsak.news.views.article_index article.slug %}?utm_source=newsletter&utm_medium=email&utm_campaign=buletina" style="color: rgb(106, 151, 201); text-decoration: none;"><br/>+ Gehiago irakurri</a></p>
-                           
-                        
+
+
 			      </td>
                      </tr>
                   </tbody></table>
-		 
-                  
+
+
                </td>
             </tr>
             <tr>
@@ -290,7 +290,7 @@
                       </tbody>
 			  </table></td>
 				</tr>
-            
+
             <tr>
                <td class="footer" style="background-color: transparent; background-image: none; background-repeat: no-repeat; background-position: center top; background-attachment: scroll; border-top: 1px dotted rgb(204, 204, 204); font-size: 80%; font-weight: normal; color: rgb(102, 102, 102); padding: 10px 0pt; " valign="top" align="center">
                   <p style="line-height:1.5em;font-size:90%;text-align:center;">Mezu
