@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title%}Hemeroteka {% endblock %}
+{% block content%}
+<div class="news">
+<h1>Hemeroteka</h1>
+
+<div id="delicious" style="padding-left:20px;">
+<script type="text/javascript" src="http://del.icio.us/feeds/js/asiersarasua/ahotsak?title=&count=100;"></script>
+<noscript><a href="http://del.icio.us/josu">my del.icio.us</a></noscript>
+</div>
+{% endblock %}
+
+{%block menu%}
+<div id="menuherria">
+<p>Atal honetan sarean argitaratutako zenbait albistetarako loturak aurkituko dituzu. Batzuetan gure proiektuaren ingurukoak dira; beste askotan, euskalkien edo ahozko ondarearen ingurukoak, oro har. Lotura interesgarriak <a href="http://delicious.com">Delicious</a>-en kargatzen ditugu, eta gero handik zuzenean hona ekartzen.</p>
+</div>
+{%endblock%}
