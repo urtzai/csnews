@@ -1,4 +1,5 @@
 import sys
+import os
 import django
 from django.conf import settings
 from django.test.utils import get_runner
@@ -26,14 +27,32 @@ settings.configure(
         'tinymce',
         APP_NAME,
     ),
-    TEMPLATE_CONTEXT_PROCESSORS=(
-        "django.contrib.auth.context_processors.auth",
-        "django.core.context_processors.debug",
-        "django.core.context_processors.i18n",
-        "django.core.context_processors.media",
-        "django.core.context_processors.request",
-    ),
-    MIDDLEWARE_CLASSES=(
+    TEMPLATES=[
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [
+                # insert your TEMPLATE_DIRS here
+                os.path.join(os.path.dirname(__file__), "templates"),
+            ],
+            'OPTIONS': {
+                'context_processors': [
+                    # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
+                    # list if you haven't customized them:
+                    "django.contrib.auth.context_processors.auth",
+                    "django.template.context_processors.debug",
+                    "django.template.context_processors.i18n",
+                    "django.template.context_processors.media",
+                    "django.template.context_processors.request",
+                ],
+                'loaders': [
+                    # insert your TEMPLATE_LOADERS here
+                    'django.template.loaders.filesystem.Loader',
+                    'django.template.loaders.app_directories.Loader',
+                ]
+            },
+        },
+    ],
+    MIDDLEWARE=[
         'django.middleware.security.SecurityMiddleware',
         'django.contrib.sessions.middleware.SessionMiddleware',
         'django.middleware.common.CommonMiddleware',
@@ -41,7 +60,7 @@ settings.configure(
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    )
+    ]
 )
 
 if hasattr(django, 'setup'):

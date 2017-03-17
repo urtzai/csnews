@@ -1,2 +1,4 @@
 *.pyc
 csnews.egg-info/
+.coverage
+photologue/
