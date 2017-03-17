@@ -1,5 +1,6 @@
 CSNews
 ======
+
 .. image:: https://travis-ci.org/urtzai/csnews.svg?branch=master
     :target: https://travis-ci.org/urtzai/csnews
 
@@ -31,7 +32,6 @@ Instalation
     INSTALLED_APPS = [
         'django_forum_app',
     ]
-
 
 .. code-block::
 
