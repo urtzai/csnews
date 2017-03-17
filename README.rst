@@ -1,12 +1,10 @@
 CSNews
 ======
-
 .. image:: https://travis-ci.org/urtzai/csnews.svg?branch=master
     :target: https://travis-ci.org/urtzai/csnews
 
 .. image:: https://coveralls.io/repos/github/urtzai/csnews/badge.svg?branch=master
     :target: https://coveralls.io/github/urtzai/csnews?branch=master
-
 
 .. image:: https://landscape.io/github/urtzai/csnews/master/landscape.svg?style=flat
    :target: https://landscape.io/github/urtzai/csnews/master
@@ -21,9 +19,9 @@ News module for Django
 Dependencies
 ------------
 
-  * Django>=1.8
-  * django-photologue>=3.6
-  * django-tinymce>=2.6.0
+* Django>=1.8
+* django-photologue>=3.6
+* django-tinymce>=2.6.0
 
 Instalation
 -----------
