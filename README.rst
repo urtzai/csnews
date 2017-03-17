@@ -12,6 +12,10 @@ CSNews
    :target: https://landscape.io/github/urtzai/csnews/master
    :alt: Code Health
 
+.. image:: https://requires.io/github/urtzai/csnews/requirements.svg?branch=master
+     :target: https://requires.io/github/urtzai/csnews/requirements/?branch=master
+     :alt: Requirements Status
+
 News module for Django
 
 Dependencies
