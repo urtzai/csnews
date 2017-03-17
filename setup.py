@@ -18,7 +18,7 @@ setup(
     name='csnews',
     version=version,
     description="Simple news module",
-    long_description=open("README.md").read(),
+    long_description=open("README.rst").read(),
     author='Urtzi Odriozola',
     author_email='uodriozola@codesyntax.com',
     url='http://www.codesyntax.com',
