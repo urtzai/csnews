@@ -1,4 +1,4 @@
-csnews
+CSNews
 ======
 
 News module for Django
