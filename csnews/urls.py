@@ -1,10 +1,10 @@
 from django.conf.urls import url
-
+from csnews import views
 from csnews.feeds import LatestNews
 
 urlpatterns = [
-    url(r'^$', 'csnews.views.index'),
-    url(r'^feed-(?P<url>.*)/$', LatestNews()),
-    url(r'^hemeroteka/', 'csnews.views.hemeroteka'),
-    url(r'^(?P<article_slug>[\-\d\w]+)/$', 'csnews.views.article_index', name='new_display'),
+    url(r'^$', views.index, name="csnews_index"),
+    url(r'^feed-(?P<url>.*)/$', LatestNews(), name="csnews_feed"),
+    url(r'^hemeroteka/', views.archive, name="csnews_archive"),
+    url(r'^(?P<article_slug>[\-\d\w]+)/$', views.article_index, name='csnews_display'),
 ]

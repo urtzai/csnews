@@ -33,6 +33,8 @@ Instalation
         'django_forum_app',
     ]
 
+Then apply migrations: 
+
 .. code-block::
 
     ./manage.py migrate csnews

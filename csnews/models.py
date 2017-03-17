@@ -9,7 +9,7 @@ class Article(models.Model):
     published = models.DateTimeField(_('published'))
     summary = models.TextField(_('summary'), blank=True)
     body = models.TextField(_('body'))
-    image = models.ForeignKey(Photo, null=True, blank=True, related_name=_('news image'))
+    image = models.ForeignKey(Photo, null=True, blank=True, related_name=_('news_image'))
 
     is_public = models.BooleanField(default=True)
 

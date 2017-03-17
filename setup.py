@@ -21,7 +21,7 @@ setup(
     long_description=open("README.rst").read(),
     author='Urtzi Odriozola',
     author_email='uodriozola@codesyntax.com',
-    url='http://www.codesyntax.com',
+    url='https://github.com/urtzai/csnews',
     license='GPL',
     packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
     include_package_data=True,
