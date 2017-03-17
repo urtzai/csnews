@@ -1,5 +1,6 @@
 CSNews
 ======
+
 .. image:: https://travis-ci.org/urtzai/csnews.svg?branch=master
     :target: https://travis-ci.org/urtzai/csnews
 
@@ -7,10 +8,46 @@ CSNews
     :target: https://coveralls.io/github/urtzai/csnews?branch=master
 
 
+.. image:: https://landscape.io/github/urtzai/csnews/master/landscape.svg?style=flat
+   :target: https://landscape.io/github/urtzai/csnews/master
+   :alt: Code Health
+
 News module for Django
 
 Dependencies
 ------------
 
+  * Django>=1.8
+  * django-photologue>=3.6
+  * django-tinymce>=2.6.0
+
 Instalation
 -----------
+
+.. code-block:: python
+
+    INSTALLED_APPS = [
+        'django_forum_app',
+    ]
+
+
+.. code-block::
+
+    ./manage.py migrate csnews
+
+Finally, add this in ``urls.py``:
+
+.. code-block:: django
+
+    url(r'^news/', include('csnews.urls')),
+
+Support
+-------
+
+Should you experience any issues do not hesistate to post an issue or contribute in this project pulling requests.
+
+Travis CI status
+----------------
+
+We use Travis to check that the unit test suite is working against various combinations of Python, Django, etc...
+`Click here for the full report <http://travis-ci.org/#!/urtzai/csnews>`_.
