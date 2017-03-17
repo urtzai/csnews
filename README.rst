@@ -8,12 +8,12 @@ CSNews
     :target: https://coveralls.io/github/urtzai/csnews?branch=master
 
 .. image:: https://landscape.io/github/urtzai/csnews/master/landscape.svg?style=flat
-   :target: https://landscape.io/github/urtzai/csnews/master
-   :alt: Code Health
+    :target: https://landscape.io/github/urtzai/csnews/master
+    :alt: Code Health
 
 .. image:: https://requires.io/github/urtzai/csnews/requirements.svg?branch=master
-     :target: https://requires.io/github/urtzai/csnews/requirements/?branch=master
-     :alt: Requirements Status
+    :target: https://requires.io/github/urtzai/csnews/requirements/?branch=master
+    :alt: Requirements Status
 
 .. image:: https://img.shields.io/badge/python-2.7-blue.svg
     :target: https://badge.fury.io/py/csnews
