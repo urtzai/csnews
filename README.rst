@@ -15,6 +15,14 @@ CSNews
      :target: https://requires.io/github/urtzai/csnews/requirements/?branch=master
      :alt: Requirements Status
 
+.. image:: https://img.shields.io/badge/python-2.7-blue.svg
+    :target: https://badge.fury.io/py/csnews
+    :alt: Latest Python 2 version
+
+.. image:: https://img.shields.io/badge/python-3.5-blue.svg
+    :target: https://badge.fury.io/py/csnews
+    :alt: Latest Python 3 version
+
 News module for Django
 
 Dependencies
