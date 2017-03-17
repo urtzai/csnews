@@ -1,0 +1,5 @@
+include *.py
+include *.txt
+include .coveragerc
+recursive-include csnews *.html
+recursive-include csnews *.py
