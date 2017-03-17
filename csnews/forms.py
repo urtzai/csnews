@@ -7,7 +7,9 @@ TINYMCE_DEFAULT_CONFIG = getattr(settings, 'TINYMCE_DEFAULT_CONFIG', {})
 
 
 class ArticleAdminForm(forms.ModelForm):
-    desk = forms.CharField(widget=TinyMCE(
+    summary = forms.CharField(widget=TinyMCE(
+                              attrs={'cols': 80, 'rows': 50, }, mce_attrs=TINYMCE_DEFAULT_CONFIG))
+    body = forms.CharField(widget=TinyMCE(
                            attrs={'cols': 80, 'rows': 50, }, mce_attrs=TINYMCE_DEFAULT_CONFIG))
 
     class Meta:
