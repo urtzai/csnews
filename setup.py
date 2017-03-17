@@ -12,7 +12,7 @@ def get_requirements(source):
     required = set([str(ir.req) for ir in install_reqs])
     return required
 
-version = '2.9'
+version = '2.10.dev0'
 
 setup(
     name='csnews',
